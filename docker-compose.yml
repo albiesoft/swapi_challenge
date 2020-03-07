@@ -1,0 +1,24 @@
+version: '3'
+services:
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - ./api:/app
+    ports:
+      - '3002:3002'
+
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - ./app:/app
+    ports:
+      - '3000:3000'
+    depends_on:
+      - api
+    
