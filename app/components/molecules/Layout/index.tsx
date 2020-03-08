@@ -18,7 +18,7 @@ const MainLayout: FC = ({ children }) => {
         min-height: calc(100vh - 139px);
       `}</style>
     </Layout>
-  )
+  );
 };
 
 export default MainLayout;

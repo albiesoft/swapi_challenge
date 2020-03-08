@@ -25,32 +25,23 @@ const Header: FC = () => {
           </Link>
         </Item>
         <Item key="tatooine">
-          <Link
-            href="/planets/[name]"
-            as="/planets/tatooine"
-          >
+          <Link href="/planets/[name]" as="/planets/tatooine">
             <a>Tatooine</a>
           </Link>
         </Item>
         <Item key="alderaan">
-          <Link 
-            href="/planets/[name]"
-            as="/planets/alderaan"
-          >
+          <Link href="/planets/[name]" as="/planets/alderaan">
             <a>Alderaan</a>
           </Link>
         </Item>
         <Item key="yavin">
-          <Link
-            href="/planets/[name]"
-            as="/planets/yavin"
-          >
+          <Link href="/planets/[name]" as="/planets/yavin">
             <a>Yavin</a>
           </Link>
         </Item>
       </Menu>
       <style jsx>{`
-        background: #FFF;
+        background: #fff;
       `}</style>
     </Header>
   );

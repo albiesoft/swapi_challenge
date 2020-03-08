@@ -11,7 +11,7 @@ describe('<Header />', () => {
         name: 'planet'
       }
     }));
-    
+
     const target: ShallowWrapper = shallow(<Header />);
     expect(target).toMatchSnapshot();
   });

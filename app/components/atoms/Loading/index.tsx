@@ -10,7 +10,7 @@ const Loading: FC = ({ children }) => {
   Router.events.on('routeChangeStart', () => setLoanding(true));
   Router.events.on('routeChangeComplete', () => setLoanding(false));
   Router.events.on('routeChangeError', () => setLoanding(false));
-  
+
   if (loanding) {
     return (
       <Spin indicator={antIcon} tip="Loading...">
@@ -19,11 +19,7 @@ const Loading: FC = ({ children }) => {
     );
   }
 
-  return (
-    <>
-      {children}
-    </>
-  );
-}
+  return <>{children}</>;
+};
 
 export default Loading;

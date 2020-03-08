@@ -16,38 +16,44 @@ interface IProps {
     Name: string;
     Climate: string;
     Population: number;
-    Films: IFilm[]
+    Films: IFilm[];
   };
 }
 
-const PlanetsPage: NextPage<IProps> = ({ planet }) => {
-
-  return (
-    <Layout>
-      <Head>
-        <title>Planet {planet.Name}</title>
-      </Head>
-      <section className="planet-info">
-        <h1><RocketTwoTone /> {planet.Name}</h1>
-        <p><SmileTwoTone /> Population: {planet.Population}</p>
-        <p><FireTwoTone /> Climate: {planet.Climate}</p>
-      </section>
-      <Row className="planet-films" gutter={16}>
-        {planet.Films && planet.Films.map((film: IFilm) => (
+const PlanetsPage: NextPage<IProps> = ({ planet }) => (
+  <Layout>
+    <Head>
+      <title>Planet {planet.Name}</title>
+    </Head>
+    <section className="planet-info">
+      <h1>
+        <RocketTwoTone /> {planet.Name}
+      </h1>
+      <p>
+        <SmileTwoTone /> Population: {planet.Population}
+      </p>
+      <p>
+        <FireTwoTone /> Climate: {planet.Climate}
+      </p>
+    </section>
+    <Row className="planet-films" gutter={16}>
+      {planet.Films &&
+        planet.Films.map((film: IFilm) => (
           <Col xs={24} sm={24} md={12} lg={8} key={film.Title}>
-            <Card
-              title={film.Title}
-              style={{ marginBottom: '16px' }}
-            >
+            <Card title={film.Title} style={{ marginBottom: '16px' }}>
               <p>Realese Date: {film.ReleaseDate}</p>
               <p>Director: {film.Director}</p>
             </Card>
           </Col>
         ))}
-      </Row>
-    </Layout>
-  )
-}
+    </Row>
+    <style jsx>{`
+      .planet-info {
+        background: #fff;
+      }
+    `}</style>
+  </Layout>
+);
 
 PlanetsPage.getInitialProps = async ctx => {
   const { query, req } = ctx;
@@ -57,8 +63,7 @@ PlanetsPage.getInitialProps = async ctx => {
 
   return {
     planet
-  }
-}
-
+  };
+};
 
 export default PlanetsPage;

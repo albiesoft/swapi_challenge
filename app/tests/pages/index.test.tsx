@@ -8,7 +8,7 @@ describe('<Home />', () => {
   });
 
   test('It renders correctly', () => {
-    let target: ShallowWrapper = shallow(<Home />);
+    const target: ShallowWrapper = shallow(<Home />);
     expect(target).toMatchSnapshot();
   });
 });

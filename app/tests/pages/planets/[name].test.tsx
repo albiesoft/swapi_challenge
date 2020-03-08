@@ -9,18 +9,19 @@ describe('<PlanetsPage />', () => {
 
   test('It renders correctly', () => {
     const data = {
-        Name: 'PlanetName',
-        Climate: 'Hot',
-        Population: 10000,
-        Films: [
-          {
-            Title: 'FilmTitle',
-            Director: 'FilmDirector',
-            ReleaseDate: '2020-03-08'
-          }
-        ]
-    }
-    let target: ShallowWrapper = shallow(<PlanetsPage planet={data} />);
+      Name: 'PlanetName',
+      Climate: 'Hot',
+      Population: 10000,
+      Films: [
+        {
+          Title: 'FilmTitle',
+          Director: 'FilmDirector',
+          ReleaseDate: new Date()
+        }
+      ]
+    };
+
+    const target: ShallowWrapper = shallow(<PlanetsPage planet={data} />);
     expect(target).toMatchSnapshot();
   });
 });
