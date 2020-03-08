@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> It renders correctly 1`] = `
+<Footer>
+  Made with 
+  <img
+    alt="love"
+    src="/heart.svg"
+    width="30px"
+  />
+   by Albert Fernandez
+  <style>
+    
+        text-align: center
+        img {
+          padding-left: 5px;
+        }
+      
+  </style>
+</Footer>
+`;

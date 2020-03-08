@@ -34,7 +34,7 @@ const PlanetsPage: NextPage<IProps> = ({ planet }) => {
       </section>
       <Row className="planet-films" gutter={16}>
         {planet.Films && planet.Films.map((film: IFilm) => (
-          <Col xs={24} sm={24} md={12} lg={8}>
+          <Col xs={24} sm={24} md={12} lg={8} key={film.Title}>
             <Card
               title={film.Title}
               style={{ marginBottom: '16px' }}

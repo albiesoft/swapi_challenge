@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PlanetsPage /> It renders correctly 1`] = `
+<MainLayout>
+  <Head>
+    <title>
+      Planet 
+      PlanetName
+    </title>
+  </Head>
+  <section
+    className="planet-info"
+  >
+    <h1>
+      <ForwardRef(RocketTwoTone) />
+       
+      PlanetName
+    </h1>
+    <p>
+      <ForwardRef(SmileTwoTone) />
+       Population: 
+      10000
+    </p>
+    <p>
+      <ForwardRef(FireTwoTone) />
+       Climate: 
+      Hot
+    </p>
+  </section>
+  <Row
+    className="planet-films"
+    gutter={16}
+  >
+    <Col
+      key="FilmTitle"
+      lg={8}
+      md={12}
+      sm={24}
+      xs={24}
+    >
+      <Card
+        style={
+          Object {
+            "marginBottom": "16px",
+          }
+        }
+        title="FilmTitle"
+      >
+        <p>
+          Realese Date: 
+          2020-03-08
+        </p>
+        <p>
+          Director: 
+          FilmDirector
+        </p>
+      </Card>
+    </Col>
+  </Row>
+</MainLayout>
+`;

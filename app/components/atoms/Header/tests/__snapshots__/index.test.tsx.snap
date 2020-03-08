@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> It renders correctly 1`] = `
+<Header>
+  <Menu
+    defaultSelectedKeys={
+      Array [
+        "planet",
+      ]
+    }
+    mode="horizontal"
+    style={
+      Object {
+        "lineHeight": "64px",
+      }
+    }
+    theme="light"
+  >
+    <MenuItem
+      key="/"
+    >
+      <Link
+        href="/"
+      >
+        <a>
+          Home
+        </a>
+      </Link>
+    </MenuItem>
+    <MenuItem
+      key="tatooine"
+    >
+      <Link
+        as="/planets/tatooine"
+        href="/planets/[name]"
+      >
+        <a>
+          Tatooine
+        </a>
+      </Link>
+    </MenuItem>
+    <MenuItem
+      key="alderaan"
+    >
+      <Link
+        as="/planets/alderaan"
+        href="/planets/[name]"
+      >
+        <a>
+          Alderaan
+        </a>
+      </Link>
+    </MenuItem>
+    <MenuItem
+      key="yavin"
+    >
+      <Link
+        as="/planets/yavin"
+        href="/planets/[name]"
+      >
+        <a>
+          Yavin
+        </a>
+      </Link>
+    </MenuItem>
+  </Menu>
+  <style>
+    
+        background: #FFF;
+      
+  </style>
+</Header>
+`;

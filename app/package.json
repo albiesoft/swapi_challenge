@@ -2,10 +2,19 @@
   "name": "gentingcasino",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": ">=6.9.0 <7",
+    "node": ">=10.15.0 <11"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "check-node-version --package && NODE_ENV=test jest",
+    "test::ci": "jest --ci",
+    "qa": "npm run qa::lint",
+    "qa::lint": "eslint --quiet --ext .tsx --ext .ts .",
+    "qa::prettier": "pretty-quick --staged"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
@@ -18,8 +27,34 @@
     "react-dom": "16.13.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@types/enzyme": "^3.10.5",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@types/jest": "^25.1.4",
     "@types/node": "^13.9.0",
     "@types/react": "^16.9.23",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
+    "babel-jest": "^25.1.0",
+    "babel-plugin-dynamic-import-node": "^2.3.0",
+    "check-node-version": "^4.0.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.4.4",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-cypress": "^2.10.3",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "jest": "^25.1.0",
+    "jest-next-dynamic": "^1.0.1",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
     "typescript": "^3.8.3"
   }
 }
