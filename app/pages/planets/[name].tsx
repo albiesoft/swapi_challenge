@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 import fetch from 'isomorphic-unfetch';
+import dayjs from 'dayjs';
 import { Row, Col, Card } from 'antd';
 import Layout from '../../components/molecules/Layout';
 import { RocketTwoTone, SmileTwoTone, FireTwoTone } from '@ant-design/icons';
@@ -41,7 +42,7 @@ const PlanetsPage: NextPage<IProps> = ({ planet }) => (
         planet.Films.map((film: IFilm) => (
           <Col xs={24} sm={24} md={12} lg={8} key={film.Title}>
             <Card title={film.Title} style={{ marginBottom: '16px' }}>
-              <p>Realese Date: {film.ReleaseDate}</p>
+              <p>Realese Date: {dayjs(film.ReleaseDate).format('DD MMMM YYYY')}</p>
               <p>Director: {film.Director}</p>
             </Card>
           </Col>
@@ -50,6 +51,8 @@ const PlanetsPage: NextPage<IProps> = ({ planet }) => (
     <style jsx>{`
       .planet-info {
         background: #fff;
+        padding: 10px 20px;
+        margin-bottom: 20px;
       }
     `}</style>
   </Layout>

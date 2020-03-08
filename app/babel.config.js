@@ -1,10 +1,28 @@
 module.exports = {
   env: {
     production: {
-      presets: ['next/babel']
+      presets: ['next/babel'],
+      plugins: [
+        [
+          "import",
+          {
+            "libraryName": "antd",
+            "style": "css"
+          }
+        ]
+      ]
     },
     development: {
-      presets: ['next/babel']
+      presets: ['next/babel'],
+      plugins: [
+        [
+          "import",
+          {
+            "libraryName": "antd",
+            "style": "css"
+          }
+        ]
+      ]
     },
     test: {
       presets: [
